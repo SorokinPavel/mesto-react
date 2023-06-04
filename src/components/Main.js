@@ -1,4 +1,3 @@
-import profilePhoto from '../images/profile-image.jpg';
 import Card from "../components/Card.js";
 import api from "../utils/Api.js";
 import React from "react";

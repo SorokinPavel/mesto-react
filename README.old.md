@@ -14,8 +14,3 @@
 Есть возможность ставить лайки.
 
 **Технологии**: HTML, CSS, JS
-
-
-**GitHub Pages**
-
-* [Ссылка на GitHub Pages](https://sorokinpavel.github.io/mesto-react/)
