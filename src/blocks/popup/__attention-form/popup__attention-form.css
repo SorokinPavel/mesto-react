@@ -1,0 +1,10 @@
+.popup__attention-form {
+  margin: 38px 36px 36px;
+}
+
+@media screen and (max-width: 515px) {
+  .popup__attention-form {
+    margin: 20px;
+  }
+}
+
