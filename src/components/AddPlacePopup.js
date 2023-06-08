@@ -35,6 +35,8 @@ function AddPlacePopup(props, isOpen) {
         isOpen={props.isOpen}
         onClose={props.onClose}
         onSubmit={handleSubmit}
+        isLoading={props.isLoading}
+        loadingText="Сохранение..."
       >
         <input name="title" className="popup__input popup__input_change_post-title" id="post-input"
           placeholder="Название" minLength="2" maxLength="30" value={title}

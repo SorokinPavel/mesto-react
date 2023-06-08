@@ -20,6 +20,8 @@ function EditAvatarPopup(props) {
         isOpen={props.isOpen}
         onClose={props.onClose}
         onSubmit={handleSubmit}
+        isLoading={props.isLoading}
+        loadingText="Сохранение..."
       >
         <input ref={ref} name="link" className="popup__input popup__input_change_image-link" id="avatar-input"
           placeholder="Ссылка на картинку" type="url" required/>

@@ -15,6 +15,8 @@ function AttentionPopup(props) {
         isOpen={props.isOpen}
         onClose={props.onClose}
         onSubmit={handleSubmit}
+        isLoading={props.isLoading}
+        loadingText="Удаление..."
       >
       </PopupWithForm>
     );

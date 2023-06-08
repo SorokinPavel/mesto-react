@@ -19,7 +19,7 @@ function PopupWithForm (props) {
           {props.children}
         </fieldset>
         <button type="submit" className={`popup__button popup__${props.name}-button`}>
-          {props.button}
+          {props.isLoading ? props.loadingText : props.button}
         </button>
       </form>
       </div>
