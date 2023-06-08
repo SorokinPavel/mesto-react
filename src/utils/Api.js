@@ -27,7 +27,7 @@ class Api {
     return fetch(`${this._baseUrl}users/me`, {
       headers: this._headers,
       method: 'PATCH',
-      body: JSON.stringify({name: user.login, about: user.description})
+      body: JSON.stringify({name: user.name, about: user.about})
     })
         .then(res => {return this._getResponse(res);})
   }
@@ -48,26 +48,20 @@ class Api {
     })
       .then(res => {return this._getResponse(res); })
   }
-  cardLike(cardId) {
+  changeCardLike(cardId, isLiked) {
+    const method = isLiked ? "PUT" : "DELETE";
     return fetch(`${this._baseUrl}cards/${cardId}/likes`, {
       headers: this._headers,
-      method: 'PUT',
+      method: method,
     })
       .then(res => {return this._getResponse(res); })
   }
 
-  cardDeleteLike(cardId) {
-    return fetch(`${this._baseUrl}cards/${cardId}/likes`, {
-      headers: this._headers,
-      method: 'DELETE',
-    })
-      .then(res => {return this._getResponse(res); })
-  }
   changeAvatar(profileAvatar) {
     return fetch(`${this._baseUrl}users/me/avatar`, {
       headers: this._headers,
       method: 'PATCH',
-      body: JSON.stringify({ avatar: profileAvatar.link })
+      body: JSON.stringify({ avatar: profileAvatar.avatar })
     })
       .then(res => {return this._getResponse(res);})
   }
